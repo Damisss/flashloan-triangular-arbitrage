@@ -1,0 +1,28 @@
+{
+  "name": "smart-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fork": "npx hardhat node --network hardhat",
+    "manipulate": "npx hardhat run scripts/manipulation.ts --network hardhat",
+    "simulate": "npx hardhat run scripts/simulate-triangular-arbitrage.ts --network hardhat",
+    "forge:test": "cross-var forge test --mp test/foundry/TriangularArbitrage.t.sol  --fork-url  https://polygon-mainnet.g.alchemy.com/v2/EDhxEnxVG7JWBD_5TBCh5WwTH0qSHjDq -vv"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.12.5"
+  },
+  "dependencies": {
+    "@aave/core-v3": "^1.17.2",
+    "@openzeppelin/contracts": "^4.8.0",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "cross-var": "^1.1.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "hardhat-contract-sizer": "^2.8.0"
+  }
+}
